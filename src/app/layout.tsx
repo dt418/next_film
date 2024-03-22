@@ -1,6 +1,7 @@
 import { type PropsWithChildren } from "react";
 import type { Metadata } from "next";
 import { Roboto as FontSans } from "next/font/google";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import Footer from "@/components/partials/footer";
 import { Header } from "@/components/partials/header";
@@ -43,6 +44,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
           {children}
           <Footer />
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
