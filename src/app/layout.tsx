@@ -2,10 +2,10 @@ import { type PropsWithChildren } from "react";
 import type { Metadata } from "next";
 import { Roboto as FontSans } from "next/font/google";
 
-import Footer from "@/components/partials/footer";
-import { Header } from "@/components/partials/header";
-import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/providers/theme";
+import Footer from "../components/partials/footer";
+import { Header } from "../components/partials/header";
+import { cn } from "../lib/utils";
+import { ThemeProvider } from "../providers/theme";
 
 import "./globals.css";
 

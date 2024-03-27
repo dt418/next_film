@@ -27,7 +27,7 @@ export default async function Home({ searchParams }: THomePageProps) {
 
   const views = (
     await redis.mget<number[]>(
-      ...items.map((film) => ["pageviews", "films", film.slug].join(":"))
+      ...items.map((film) => ["pageviews", "films", film?.slug].join(":"))
     )
   ).reduce((acc, v, i) => {
     acc[items[i].slug] = v ?? 0;
