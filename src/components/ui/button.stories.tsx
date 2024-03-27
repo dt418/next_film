@@ -16,7 +16,16 @@ const meta = {
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
     variant: {
-      control: "text",
+      control: "select",
+      options: [
+        "default",
+        "primary",
+        "secondary",
+        "outline",
+        "destructive",
+        "link",
+        "ghost",
+      ],
       description: "The button variant",
       defaultValue: "default",
     },
@@ -38,6 +47,7 @@ export const Default: Story = {
 
 export const Secondary: Story = {
   args: {
+    ...Default.args,
     variant: "secondary",
     children: "Secondary Button",
   },
@@ -45,6 +55,7 @@ export const Secondary: Story = {
 
 export const Outline: Story = {
   args: {
+    ...Default.args,
     variant: "outline",
     children: "Outline Button",
   },
@@ -52,6 +63,7 @@ export const Outline: Story = {
 
 export const Link: Story = {
   args: {
+    ...Default.args,
     variant: "link",
     children: "Link Button",
   },
@@ -59,6 +71,7 @@ export const Link: Story = {
 
 export const Destructive: Story = {
   args: {
+    ...Default.args,
     variant: "destructive",
     children: "Destructive Button",
   },
@@ -66,6 +79,7 @@ export const Destructive: Story = {
 
 export const Ghost: Story = {
   args: {
+    ...Default.args,
     variant: "ghost",
     children: "Ghost Button",
   },
