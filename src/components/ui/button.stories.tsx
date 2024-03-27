@@ -19,7 +19,6 @@ const meta = {
       control: "select",
       options: [
         "default",
-        "primary",
         "secondary",
         "outline",
         "destructive",
@@ -27,6 +26,12 @@ const meta = {
         "ghost",
       ],
       description: "The button variant",
+      defaultValue: ["default"],
+    },
+    size: {
+      control: "select",
+      options: ["default", "icon", "lg", "sm"],
+      description: "The button size",
       defaultValue: "default",
     },
   },
@@ -41,6 +46,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     variant: "default",
+    size: "default",
     children: "Default Button",
   },
 };
