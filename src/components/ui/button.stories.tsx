@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
+import { HomeIcon } from "lucide-react";
 
 import { Button } from "./button";
 
@@ -25,13 +26,13 @@ const meta = {
         "link",
         "ghost",
       ],
-      description: "The button variant",
+      description: "The button variant. Default value is `default`",
       defaultValue: ["default"],
     },
     size: {
       control: "select",
       options: ["default", "icon", "lg", "sm"],
-      description: "The button size",
+      description: "The button size. Default value is `default`",
       defaultValue: "default",
     },
   },
@@ -88,5 +89,13 @@ export const Ghost: Story = {
     ...Default.args,
     variant: "ghost",
     children: "Ghost Button",
+  },
+};
+
+export const SizeIcon: Story = {
+  args: {
+    ...Default.args,
+    size: "icon",
+    children: <HomeIcon />,
   },
 };
