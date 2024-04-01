@@ -25,13 +25,15 @@ const meta = {
         "destructive",
         "link",
         "ghost",
+        null,
+        undefined,
       ],
       description: "The button variant. Default value is `default`",
       defaultValue: ["default"],
     },
     size: {
       control: "select",
-      options: ["default", "icon", "lg", "sm"],
+      options: ["default", "icon", "lg", "sm", null, undefined],
       description: "The button size. Default value is `default`",
       defaultValue: "default",
     },
@@ -49,6 +51,7 @@ export const Default: Story = {
     variant: "default",
     size: "default",
     children: "Default Button",
+    asChild: false
   },
 };
 
