@@ -37,6 +37,10 @@ const meta = {
       description: "The button size. Default value is `default`",
       defaultValue: "default",
     },
+    asChild: {
+      control: "boolean",
+      defaultValue: undefined,
+    },
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   args: { onClick: fn() },
@@ -51,7 +55,7 @@ export const Default: Story = {
     variant: "default",
     size: "default",
     children: "Default Button",
-    asChild: false
+    asChild: undefined,
   },
 };
 
