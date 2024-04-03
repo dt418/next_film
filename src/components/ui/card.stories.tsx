@@ -1,12 +1,12 @@
-// src/components/ui/{{kebabCase componentName}}.stories.tsx
+// src/components/ui/card.stories.tsx
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { {{pascalCase componentName}} } from './{{kebabCase componentName}}';
+import { Card } from './card';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: "components/ui/{{kebabCase componentName}}",
-  component: {{pascalCase componentName}},
+  title: "components/ui/card",
+  component: Card,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: "centered",
@@ -21,7 +21,7 @@ const meta = {
   args: {
   
   },
-} satisfies Meta<typeof {{pascalCase componentName}}>;
+} satisfies Meta<typeof Card>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
