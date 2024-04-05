@@ -1,3 +1,4 @@
+import withMDX from "@next/mdx";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -11,6 +12,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   transpilePackages: ["lucide-react"],
+  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
 };
 
-export default nextConfig;
+const nextConfigWithMDX = withMDX(nextConfig);
+
+export default nextConfigWithMDX;
