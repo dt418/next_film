@@ -1,10 +1,12 @@
 import { type PropsWithChildren } from "react";
 import type { Metadata } from "next";
 import { Roboto as FontSans } from "next/font/google";
+import { PrismicPreview } from "@prismicio/next";
 
 import Footer from "@/components/partials/footer";
 import { Header } from "@/components/partials/header";
 import { cn } from "@/lib/utils";
+import { repositoryName } from "@/prismicio";
 import { ThemeProvider } from "@/providers/theme";
 
 import "./globals.css";
@@ -43,6 +45,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
           {children}
           <Footer />
         </ThemeProvider>
+        <PrismicPreview repositoryName={repositoryName} />
       </body>
     </html>
   );
