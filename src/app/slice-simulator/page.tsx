@@ -1,9 +1,9 @@
+import { SliceZone } from "@prismicio/react";
 import {
+  getSlices,
   SliceSimulator,
   SliceSimulatorParams,
-  getSlices,
 } from "@slicemachine/adapter-next/simulator";
-import { SliceZone } from "@prismicio/react";
 
 import { components } from "../../slices";
 
