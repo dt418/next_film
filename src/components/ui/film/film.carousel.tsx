@@ -27,13 +27,7 @@ export function FilmCarousel({ items = [], title }: TFilmCarouselProps) {
           {title}
         </h2>
       ) : null}
-      <Carousel
-        className="w-full"
-        opts={{ loop: true }}
-        plugins={[
-          Autoplay(),
-        ]}
-      >
+      <Carousel className="w-full" opts={{ loop: true }} plugins={[Autoplay()]}>
         <CarouselContent className="-ml-1">
           {items?.map((filmItem) => (
             <CarouselItem

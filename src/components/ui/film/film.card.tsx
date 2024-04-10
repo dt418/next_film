@@ -16,8 +16,7 @@ export const FilmCard = (props: IMovieBase) => {
           <Image
             className="object-cover rounded-t-lg transition-all scale-100 group-hover:scale-105"
             alt={name || original_name}
-            width={300}
-            height={450}
+            fill
             style={{
               aspectRatio: "2/3",
               objectFit: "cover",
@@ -29,7 +28,9 @@ export const FilmCard = (props: IMovieBase) => {
           </div>
         </div>
         <CardContent className="p-4">
-          <h3 className="text-[15px] font-medium capitalize pt-1 block truncate line-clamp-1">{name}</h3>
+          <h3 className="text-[15px] font-medium capitalize pt-1 block truncate line-clamp-1">
+            {name}
+          </h3>
           <p className="text-sm truncate line-clamp-1 font-normal">
             {original_name}
           </p>
