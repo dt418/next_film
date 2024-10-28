@@ -2,13 +2,14 @@
   "name": "next_film",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "next lint --fix"
+    "lint:fix": "next lint --fix",
+    "preview":"netlify dev --live",
+    "deploy":"netlify build && netlify deploy"
   },
   "dependencies": {
     "@netlify/plugin-lighthouse": "^6.0.1",

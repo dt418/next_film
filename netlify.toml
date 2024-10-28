@@ -1,5 +1,5 @@
 [build]
-  command = "next build"
+  command = "bun run build"
   base = "."
   publish = ".next"
 
@@ -8,6 +8,9 @@
 
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
+
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
 
 [build.environment]
   NEXT_USE_NETLIFY_EDGE = "true"
