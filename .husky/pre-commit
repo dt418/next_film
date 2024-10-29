@@ -1,0 +1,3 @@
+bun run lint
+bun run lint:fix
+bun run build
